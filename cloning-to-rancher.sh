@@ -19,7 +19,7 @@ if ! qm list | awk '{print $1}' | grep -q "^$template_id$"; then
   exit 1
 fi
 
-vm_name="vm$vm_id"
+vm_name="master"
 echo "Creating VM $vm_id: $vm_name"
 
 # Clone the VM and set memory and cpu cores
