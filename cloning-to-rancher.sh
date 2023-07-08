@@ -24,7 +24,7 @@ echo "Creating VM $vm_id: $vm_name"
 
 # Clone the VM and set memory and cpu cores
 qm clone $template_id $vm_id --name $vm_name
-qm set $vm_id --memory 4096 --sockets 1 --cores 1
+qm set $vm_id --memory 4096 --sockets 1 --cores 2
 
 # Start the VM
 qm start $vm_id
