@@ -23,3 +23,6 @@ kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Doc
 
 # Vérifiez encore une fois les pods dans tous les namespaces
 kubectl get pods --all-namespaces
+
+# Regenrate the join token
+kubeadm token create --print-join-command
