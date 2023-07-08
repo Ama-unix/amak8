@@ -1,5 +1,5 @@
 # Exécute la commande 'docker ps' pour afficher les conteneurs en cours
-container_info=$(docker ps)
+container_info=$(sudo docker ps)
 
 # Récupère l'ID du premier conteneur de la liste
 container_id=$(echo "$container_info" | awk 'NR==2 {print $1}')
