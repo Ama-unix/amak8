@@ -22,6 +22,10 @@ fi
 # Loop to create the VM clones
 for ((i = 1; i <= num_vms; i++)); do
 
+  # Get the VM ID from the user
+  echo "Veuillez entrer l'ID pour la VM $i :"
+  read vm_id
+
   # Get the VM name from the user
   echo "Veuillez entrer le nom pour la VM $i :"
   read vm_name
@@ -46,7 +50,6 @@ for ((i = 1; i <= num_vms; i++)); do
   echo "Veuillez sélectionner le stockage pour la VM $i :"
   read storage_id
 
-  vm_id=$(($template_id + $i))
   echo "Création de la VM $vm_id: $vm_name"
   qm clone $template_id $vm_id --name $vm_name
 
